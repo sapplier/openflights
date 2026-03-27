@@ -17,7 +17,7 @@ buildlocale() {
   PO_NEWEST=$1/newest.po
   PO_MESSAGES=$1/messages.po
 
-  msgmerge -N $PO_MESSAGES $PO_NEW >$PO_NEWEST
+  msgmerge -N $PO_MESSAGES $PO_NEW >$PO_NEWEST 
   grep -v "^#~" $PO_NEWEST >$PO_MESSAGES
   rm $PO_NEW $PO_NEWEST
 
